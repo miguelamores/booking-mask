@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import DatePicker from 'material-ui/DatePicker';
 
-function Date() {
+
+const Date = (props) => {
   return(
     <div>
-      <input type="date" name="outbound"/>
-      <input type="date" name="return"/>
+      <DatePicker hintText="Start date" mode="landscape"
+        onChange={(event,date) => props.onChangeStartDate(date)}
+        />
+      <DatePicker hintText="End date" mode="landscape"
+        onChange={(event,date) => props.onChangeEndDate(date)}
+        />
     </div>
   )
 }

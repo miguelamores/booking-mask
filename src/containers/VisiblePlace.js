@@ -5,22 +5,17 @@ import { addFrom, addTo } from '../actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    countries: state.place
+    var: state.place
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onSelect: text => {
-      console.log(ownProps.wrapperProps);
-      if(ownProps.wrapperProps === 'from'){
-        console.log(ownProps.filter);
-        dispatch(addFrom(text))}
-      else{
-        console.log(ownProps.filter);
-        dispatch(addTo(text))
-      }
-
+    onSelectFrom: text => {
+      dispatch(addFrom(text))
+    },
+    onSelectTo: text => {
+      dispatch(addTo(text))
     }
   }
 }

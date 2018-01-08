@@ -14,8 +14,24 @@ export const place = (state = initialState, action) => {
     case 'ADD_TO':
       return {
         ...state,
-        ToName: action.text
+        toName: action.text
       }
+    case 'START_DAY':
+      return {
+        ...state,
+        startDate: action.date
+      }
+    case 'END_DATE':
+      return{
+        ...state,
+        endDate: action.date
+      }
+    case 'ADD_ADULT':
+      return{
+        ...state,
+        adults: state.adults + 1
+      }
+      break;
     default:
       return state
   }

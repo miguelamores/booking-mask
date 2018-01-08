@@ -18,9 +18,22 @@ export const getCountries = () => {
   }
 }
 
-// export const getCountries = (countries) => {
-//   return {
-//     type: 'GET_COUNTRIES',
-//     countries
-//   }
-// }
+export const startDate = date => {
+  return {
+    type: 'START_DAY',
+    date
+  }
+}
+
+export const endDate = date => {
+  return {
+    type: 'END_DATE',
+    date
+  }
+}
+
+export const addAdult = () => {
+  return {
+    type: 'ADD_ADULT'
+  }
+}
