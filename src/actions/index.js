@@ -37,3 +37,39 @@ export const addAdult = () => {
     type: 'ADD_ADULT'
   }
 }
+
+export const removeAdult = () => {
+  return {
+    type: 'REMOVE_ADULT'
+  }
+}
+
+export const addChildren = () => {
+  return {
+    type: 'ADD_CHILDREN'
+  }
+}
+
+export const removeChildren = () => {
+  return {
+    type: 'REMOVE_CHILDREN'
+  }
+}
+
+export const addInfant = () => {
+  return {
+    type: 'ADD_INFANT'
+  }
+}
+
+export const removeInfant = () => {
+  return {
+    type: 'REMOVE_INFANT'
+  }
+}
+
+export const search = () => {
+  return {
+    type: 'SEARCH'
+  }
+}

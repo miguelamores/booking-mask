@@ -22,7 +22,7 @@ import Paper from 'material-ui/Paper';
  };
 
 const Passenger = (props) => (
-  <Table selectable="false" >
+  <Table>
     <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
       {/* <TableRow>
         <TableHeaderColumn>ID</TableHeaderColumn>
@@ -34,21 +34,33 @@ const Passenger = (props) => (
       <TableRow>
         <TableRowColumn></TableRowColumn>
         <TableRowColumn>Adults
-          <RaisedButton label="-" secondary={true} />
-          <Paper style={style} zDepth={5}>fasd</Paper>
-          <RaisedButton label="+" primary={true} onClick={(event) => props.onAddAdult()}/>
+          <RaisedButton label="-" secondary={true} onClick={() => props.onRemoveAdult()}/>
+          <Paper style={style} zDepth={5}>{props.adults}</Paper>
+          <RaisedButton label="+" primary={true} onClick={() => props.onAddAdult()}/>
         </TableRowColumn>
         {/* <TableRowColumn>Employed</TableRowColumn> */}
       </TableRow>
       <TableRow>
-        <TableRowColumn>2</TableRowColumn>
-        <TableRowColumn>Randal White</TableRowColumn>
-        <TableRowColumn>Unemployed</TableRowColumn>
+        <TableRowColumn></TableRowColumn>
+        <TableRowColumn>Children
+          <RaisedButton label="-" secondary={true} onClick={() => props.onRemoveChildren()}/>
+          <Paper style={style} zDepth={5}>{props.children}</Paper>
+          <RaisedButton label="+" primary={true} onClick={() => props.onAddChildren()}/>
+        </TableRowColumn>
+
       </TableRow>
       <TableRow>
-        <TableRowColumn>3</TableRowColumn>
-        <TableRowColumn>Stephanie Sanders</TableRowColumn>
-        <TableRowColumn>Employed</TableRowColumn>
+        <TableRowColumn></TableRowColumn>
+        <TableRowColumn>Infants
+          <RaisedButton label="-" secondary={true} onClick={() => props.onRemoveInfant()}/>
+          <Paper style={style} zDepth={5}>{props.infants}</Paper>
+          <RaisedButton label="+" primary={true} onClick={() => props.onAddInfant()}/>
+        </TableRowColumn>
+      </TableRow>
+      <TableRow>
+        <TableRowColumn></TableRowColumn>
+        <TableRowColumn><RaisedButton label="Search" fullWidth={true} /></TableRowColumn>
+        <TableRowColumn></TableRowColumn>
       </TableRow>
     </TableBody>
   </Table>

@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addFrom, getCountries } from '../actions'
 
-let AddFrom = ({ dispatch }) => {
+let AddFrom = ({ dispatch, props }) => {
   return (
     <div>
       <form
@@ -13,6 +13,7 @@ let AddFrom = ({ dispatch }) => {
         <button type="submit">
           Search
         </button>
+        
         {/* <div>{this.props.fromName}</div> */}
       </form>
     </div>
@@ -20,7 +21,7 @@ let AddFrom = ({ dispatch }) => {
 }
 
 const mapStateToProps = state => ({
-    fromName: state.place
+    root: state
 })
 
 const mapDispatchToProps = (dispatch) => {

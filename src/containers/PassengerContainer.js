@@ -1,11 +1,15 @@
 import { connect } from 'react-redux';
-import { addAdult } from '../actions';
+import { addAdult, removeAdult, addChildren, removeChildren,
+        addInfant, removeInfant} from '../actions';
 import Passenger from '../components/Passenger';
+
 
 
 const mapStateToProps = state => {
   return {
-    adults: state.adults
+    adults: state.passenger.adults,
+    children: state.passenger.children,
+    infants: state.passenger.infants
   }
 }
 
@@ -13,6 +17,21 @@ const mapDispatchToProps = dispatch => {
   return {
     onAddAdult: () => {
       dispatch(addAdult())
+    },
+    onRemoveAdult: () => {
+      dispatch(removeAdult())
+    },
+    onAddChildren: () => {
+      dispatch(addChildren())
+    },
+    onRemoveChildren: () => {
+      dispatch(removeChildren())
+    },
+    onAddInfant: () => {
+      dispatch(addInfant())
+    },
+    onRemoveInfant: () => {
+      dispatch(removeInfant())
     }
   }
 }
