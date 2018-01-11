@@ -17,7 +17,6 @@ store.dispatch(getCountries());
  console.log(store.getState().place);
 // unsubscribe()
 
-
 ReactDOM.render(
   <Provider store={store}>
     <App />

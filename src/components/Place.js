@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import Autocomplete from 'react-autocomplete';
 
 class Place extends Component{
-  constructor() {
-    super();
-  }
 
   render() {
     return (
@@ -15,7 +12,7 @@ class Place extends Component{
           items={this.props.var.state}
           renderItem={(item, isHighlighted) =>
             <div key={item.code} style={{ background: isHighlighted ? 'lightgray' : 'white' }}>
-              {item.name}
+              {item.name} - {item.code}
             </div>
           }
           value={this.props.var.fromName}

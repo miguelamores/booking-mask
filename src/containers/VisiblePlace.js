@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import Place from '../components/Place';
-import placeApp from '../reducers/place';
 import { addFrom, addTo } from '../actions';
 
 const mapStateToProps = (state, ownProps) => {

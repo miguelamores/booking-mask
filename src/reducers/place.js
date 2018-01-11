@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-//import { getCountries } from '../actions';
 import { initialState } from './initialState';
 
 export const place = (state = initialState, action) => {
@@ -69,30 +68,14 @@ export const passenger = (state = initialState2, action) => {
         ...state,
         infants: state.infants - 1
       }
-      break;
     default:
       return state
   }
-}
-
-const search = (state, action) => {
-  switch (action.type) {
-    case 'SEARCH':
-      console.log(state);
-      return{
-        state
-      }
-      break;
-    default:
-      return state
-  }
-
 }
 
 const placeApp = combineReducers({
   place,
-  passenger,
-  search
+  passenger
 })
 
 export default placeApp;

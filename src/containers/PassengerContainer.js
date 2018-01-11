@@ -3,8 +3,6 @@ import { addAdult, removeAdult, addChildren, removeChildren,
         addInfant, removeInfant} from '../actions';
 import Passenger from '../components/Passenger';
 
-
-
 const mapStateToProps = state => {
   return {
     adults: state.passenger.adults,
@@ -35,6 +33,7 @@ const mapDispatchToProps = dispatch => {
     }
   }
 }
+
 
 const PassengerContainer = connect(
   mapStateToProps,

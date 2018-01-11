@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../App.css';
-import Place from './Place';
 import Date from '../containers/DateContainer';
 import PassengerContainer from '../containers/PassengerContainer';
 import VisiblePlace from '../containers/VisiblePlace';

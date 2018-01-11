@@ -3,7 +3,6 @@ import {
   Table,
   TableBody,
   TableHeader,
-  TableHeaderColumn,
   TableRow,
   TableRowColumn,
 } from 'material-ui/Table';
@@ -24,11 +23,6 @@ import Paper from 'material-ui/Paper';
 const Passenger = (props) => (
   <Table>
     <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
-      {/* <TableRow>
-        <TableHeaderColumn>ID</TableHeaderColumn>
-        <TableHeaderColumn>Name</TableHeaderColumn>
-        <TableHeaderColumn>Status</TableHeaderColumn>
-      </TableRow> */}
     </TableHeader>
     <TableBody displayRowCheckbox={false}>
       <TableRow>
@@ -38,7 +32,6 @@ const Passenger = (props) => (
           <Paper style={style} zDepth={5}>{props.adults}</Paper>
           <RaisedButton label="+" primary={true} onClick={() => props.onAddAdult()}/>
         </TableRowColumn>
-        {/* <TableRowColumn>Employed</TableRowColumn> */}
       </TableRow>
       <TableRow>
         <TableRowColumn></TableRowColumn>
@@ -47,7 +40,6 @@ const Passenger = (props) => (
           <Paper style={style} zDepth={5}>{props.children}</Paper>
           <RaisedButton label="+" primary={true} onClick={() => props.onAddChildren()}/>
         </TableRowColumn>
-
       </TableRow>
       <TableRow>
         <TableRowColumn></TableRowColumn>
@@ -59,7 +51,8 @@ const Passenger = (props) => (
       </TableRow>
       <TableRow>
         <TableRowColumn></TableRowColumn>
-        <TableRowColumn><RaisedButton label="Search" fullWidth={true} /></TableRowColumn>
+        <TableRowColumn>
+        </TableRowColumn>
         <TableRowColumn></TableRowColumn>
       </TableRow>
     </TableBody>
