@@ -31,6 +31,11 @@ let search = (props) => {
   )
 }
 
+
+/*
+Container to connect props and dispatch actions to the visible component
+*/
+
 const mapStateToProps = state => ({
     root: state
 })

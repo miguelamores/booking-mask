@@ -1,3 +1,7 @@
+/*
+Container to connect props and dispatch actions to the visible component
+*/
+
 import { connect } from 'react-redux';
 import Place from '../components/Place';
 import { addFrom, addTo } from '../actions';

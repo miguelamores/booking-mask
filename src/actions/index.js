@@ -1,3 +1,9 @@
+/*
+Action creators to add origin and destination place
+Action creators to add start and end date
+Action creators to add adults, children and infants
+*/
+
 export const addFrom = text => {
   return {
     type: 'ADD_FROM',
